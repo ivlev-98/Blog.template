@@ -11,4 +11,10 @@ dom.i2svg()
             'activeClass': 'active'
         })
         headerNav.watch();
+        const rightNav: navToggler = new navToggler({
+            'triggers': ['#menuTrigger'],
+            'toggleItems': ['#site-overlay2', '.container', '.site-header'],
+            'activeClass': 'active'
+        })
+        rightNav.watch();
     });

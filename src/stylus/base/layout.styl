@@ -17,7 +17,13 @@ a
     display flex
     right 0
     justify-content space-between
-#site-overlay
+    @media(max-width 1024px)
+        margin 30px 50px
+        &.active
+            right 252px
+    @media(max-width 750px)
+        margin 30px 0
+#site-overlay, #site-overlay2
     position fixed
     top 0
     z-index 2
@@ -33,3 +39,8 @@ a
     visibility visible
     @media (max-width: 1024px)
         visibility hidden
+#site-overlay2.active
+    @media (max-width: 1024px)
+        right 252px
+        opacity .6
+        visibility visible
