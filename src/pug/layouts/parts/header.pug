@@ -1,0 +1,18 @@
+header.site-header
+    div.site-header__wrap
+        a.site-header__logo(href="/")
+            h1 Blog.template
+        form(action="/search")
+            input(
+                name="search"
+                placeholder="Поиск"
+                type="text"
+            )
+    .site-header__controls
+        img(src=require("../../../assets/img/avatar.jpg") alt="avatar" loading="lazy")
+        span Александр Ивлев
+    i(class="fa fa-bars" id="menuTrigger")
+    nav.site-header__nav
+        a(href="/home") Личный кабинет
+        a(href="/post/create") Создать пост
+        a(href="/logout") Выйти
