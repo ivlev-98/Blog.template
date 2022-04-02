@@ -1,0 +1,7 @@
+mixin right-nav(links)
+    nav.right-nav
+        each link in links
+            if link.selected
+                a.selected(href=link.href)= link.title
+            else
+                a(href=link.href)= link.title

@@ -1,6 +1,17 @@
 extends ../layouts/main.pug
+include ../mixins/right-nav.pug
 block title
     | Главная
 block content
     header
         h2 Header
+block nav
+    +right-nav([
+        {title: 'Автомобили', href: "/auto", selected: false},
+        {title: 'Путешествия', href: "/trevel", selected: true},
+        {title: 'Истории', href: "/story", selected: false},
+        {title: 'Программирование', href: "/programming", selected: false},
+        {title: 'Бизнес', href: "/business", selected: false},
+        {title: 'Кулинария', href: "/cooking", selected: false},
+        {title: 'Технологии', href: "/technologies", selected: false}
+    ])
