@@ -12,13 +12,15 @@ a
     min-height 100vh
 .container
     position relative
-    margin 30px 150px
+    margin 30px 130px
     transition $transition
     display flex
     right 0
     justify-content space-between
-    @media(max-width 1024px)
+    @media(max-width 1115px)
         margin 30px 50px
+    @media(max-width 1024px)
+        margin 30px
         &.active
             right 252px
     @media(max-width 750px)
