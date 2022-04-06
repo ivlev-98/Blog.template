@@ -1,0 +1,43 @@
+.post
+    display flex
+    flex-direction column
+    background $primary-color
+    border-radius 5px
+    margin-bottom 20px
+.post a
+    padding 10px 20px
+    @media (max-width: 750px)
+        padding 5px 10px
+.post img
+    width 100%
+    height 400px
+    object-fit cover
+.post p
+    line-height 1.8em
+.post__controls
+    display flex
+    align-items center
+    justify-content space-between
+    padding 15px 20px
+    @media (max-width: 750px)
+        padding 15px 10px
+.post__controls > div
+    display flex
+    gap 30px 
+.post__controls svg
+    font-size 1.35em
+.post__controls span, .post__controls a
+    display flex
+    align-items center
+    gap 5px
+    color $text-light-color
+    font-size 16px
+.post__controls span.action
+    cursor pointer
+.post__controls a, .post__controls span.action
+    transition $transition
+    padding 0
+    &:hover
+        color: $secondary-color
+    &.selected
+        color $secondary-color
