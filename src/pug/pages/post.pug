@@ -1,5 +1,6 @@
 extends ../layouts/main.pug
 include ../mixins/right-nav.pug
+include ../mixins/comment.pug
 block title
     | Пост
 block content
@@ -36,8 +37,15 @@ block content
                 textarea(name="comment" placeholder="Оставьте свой комментарий")
             div
                 input(type="submit" value="Отправить")
-        .post__comments-lis
-            article.post__comment
+        .post__comments-list
+            +comment()
+            +comment()
+            +comment()
+            +comment()
+            +comment()
+            +comment()
+            +comment()
+            +comment()
 
 block nav
     +right-nav([

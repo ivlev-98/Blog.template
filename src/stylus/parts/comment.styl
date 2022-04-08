@@ -1,0 +1,29 @@
+.comment
+    font-size 16px
+.comment__head
+    display flex
+    align-items center
+    justify-content space-between
+    margin 20px 0
+.comment__head > div
+    display flex
+    align-items center
+    gap 10px
+.comment__head img
+    width 30px
+    height @width
+    border-radius 50%
+.comment .light
+    color $text-light-color
+.comment .action
+    display flex
+    align-items center
+    gap 5px
+    transition $transition
+    cursor pointer
+    & > span
+        font-size 14px
+    &:hover
+        color $secondary-color
+    &.selected
+        color $secondary-color
