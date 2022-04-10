@@ -23,7 +23,9 @@
         padding 15px 10px
 .post__controls > div
     display flex
-    gap 30px 
+    gap 30px
+    @media(max-width: 750px)
+        gap 10px
 .post__controls svg
     font-size 1.35em
 .post__controls span, .post__controls a
@@ -32,6 +34,8 @@
     gap 5px
     color $text-light-color
     font-size 16px
+    @media(max-width: 750px)
+        font-size 14px
 .post__controls span.action
     cursor pointer
 .post__controls a, .post__controls span.action
@@ -51,6 +55,8 @@
     flex-direction column
     padding 30px
     border-radius 5px
+    @media(max-width: 750px)
+        padding 30px 10px
 .post__comments-form h4
     margin-top 0
     margin-bottom 25px
@@ -88,3 +94,5 @@
     flex-direction column
     padding 30px
     gap 20px
+    @media(max-width: 750px)
+        padding 30px 10px
