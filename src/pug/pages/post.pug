@@ -1,9 +1,11 @@
 extends ../layouts/main.pug
 include ../mixins/right-nav.pug
 include ../mixins/comment.pug
+include ../mixins/breadcrumbs.pug
 block title
     | Пост
 block content
+    +breadcrumbs()
     article.post 
         a(href="/post.html")
             h3 6 причин, почему вам стоит изучать программирование в 2022 году

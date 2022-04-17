@@ -1,0 +1,33 @@
+.breadcrumbs
+    display flex
+    align-items center
+    height 50px
+    background $primary-color
+    margin-bottom 20px
+    border 1px solid $third-color
+    border-radius 5px
+    padding 0 10px
+    font-size 16px
+    overflow hidden
+.breadcrumbs a
+    height 50px
+    display flex
+    align-items center
+    padding 0 5px
+    color $breadcrumbs-color
+    transition $transition
+    &:hover
+        color $breadcrumbs-hover
+        svg
+            color $breadcrumbs-hover
+    &:last-of-type + svg
+        display none
+    &.selected
+        color $breadcrumbs-hover
+.breadcrumbs svg
+    font-size 1.2em
+    color $third-color
+    transition $transition
+.breadcrumbs a > svg
+    font-size 1.4em
+    color $breadcrumbs-color
