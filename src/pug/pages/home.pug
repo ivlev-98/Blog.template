@@ -1,0 +1,32 @@
+extends ../layouts/main.pug
+include ../mixins/right-nav.pug
+include ../mixins/breadcrumbs.pug
+block title
+    | Личный кабинет
+block content
+    +breadcrumbs()
+    .home
+        figure.home__avatar
+            img(loading="lazy" alt="avatar" src=require("../../assets/img/avatar.jpg"))
+            figcaption Александр Ивлев
+        .home__stat
+            .home__row
+                .home__col.home__col-small
+                    span.home__count.home__green 15
+                    span Постов
+                .home__col.home__col-small
+                    span.home__count.home__green 85
+                    span Комментариев
+            .home__row
+                .home__col
+                    span Город:
+                    span День рождения:
+                .home__col
+                    span.home__green Воронеж
+                    span.home__green 29.05.1998
+block nav
+    +right-nav([
+        {title: 'Статистика', href: "/home", selected: true},
+        {title: 'Админка', href: "/admin", selected: false},
+        {title: 'Настройки', href: "/settings", selected: false}
+    ])
