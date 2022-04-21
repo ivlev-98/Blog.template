@@ -1,6 +1,7 @@
 extends ../layouts/main.pug
 include ../mixins/right-nav.pug
 include ../mixins/post.pug
+include ../mixins/pagination.pug
 block title
     | Главная
 block content
@@ -9,6 +10,7 @@ block content
             +post()
             +post()
             +post()
+    +pagination(8, 2)
 block nav
     +right-nav([
         {title: 'Автомобили', href: "/auto", selected: false},

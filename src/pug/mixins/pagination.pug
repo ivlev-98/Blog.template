@@ -1,0 +1,16 @@
+mixin pagination(count, selected)
+    .pagination
+        if selected > 1
+            a.pagination__link(href="?page=1") #{'<'}
+        else
+            a.pagination__link.disabled(href="?page=1") #{'<'}
+        - for(var i = 1; i <= count; i++) {
+            if i == selected
+                a.pagination__link.selected(href="?page="+i)= i
+            else
+                a.pagination__link(href="?page="+i)= i
+        - }
+        if selected < count
+            a.pagination__link(href="?page=1") #{'>'}
+        else
+            a.pagination__link.disabled(href="?page=1") #{'>'}
