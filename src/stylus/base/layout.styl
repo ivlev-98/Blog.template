@@ -49,3 +49,69 @@ a
         visibility visible
 .wrap
     width 100%
+.alerts
+    position fixed
+    bottom 30px
+    right 20px
+    z-index 3
+    display flex
+    flex-direction column
+    gap 15px
+    @media(max-width 1024px)
+        width 100%
+        right 0
+        align-items center
+.alert
+    display flex
+    align-items center
+    justify-content space-between
+    transition $transition
+    width 270px
+    height 50px
+    padding-left 30px
+    background $primary-color
+    position relative
+    border-radius 10px
+    overflow hidden
+    animation jump .2s 3 ease-in 1s
+    font-size 16px
+    box-shadow 0 0 10px 2px $text-light-color
+    @media(max-width 1024px)
+        width 60%
+    @media(max-width 750px)
+        width 85%
+    &.danger
+        &:before
+            content ''
+            position absolute
+            width 6px
+            left 0
+            height 50px
+            background $danger-color
+    &.success
+        &:before
+            content ''
+            position absolute
+            width 6px
+            left 0
+            height 50px
+            background $success-color
+.alert span
+    height 50px
+    width 45px
+    display flex
+    align-items center
+    justify-content center
+    transition $transition
+    cursor pointer
+    &:hover
+        background $third-color
+.alert svg
+    transform rotate(45deg)
+@keyframes jump
+    0%
+        transform translateX(10px)
+    50%
+        transform translateX(-10px)
+    100% 
+        transform translateX(0)
