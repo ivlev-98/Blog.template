@@ -9,6 +9,10 @@
     padding 5px 0
     transition $transition
     height: min-content
+    &.empty
+        display none
+        @media (max-width: 1024px)
+            display flex
     @media (max-width: 1024px)
         border none
         top -85px
