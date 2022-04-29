@@ -8,6 +8,9 @@ block content
         input(type="email" id="email" name="email" placeholder="example@domain.ru")
         label(for="password") Пароль:
         input(type="password" id="password" name="password" placeholder="***********")
+        span
+            input(type="checkbox" name="remember" id="remember")
+            label(for="remember") Запомнить вход?
         input(type="submit" value="Войти")
 block nav
     +right-nav([

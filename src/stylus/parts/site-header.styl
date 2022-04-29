@@ -5,7 +5,7 @@
     background $secondary-color
     color $third-color
     height 55px
-    z-index 2
+    z-index 5
     position relative
     right 0
     transition $transition
@@ -45,7 +45,7 @@
         display none
 .site-header__nav
     display flex
-    z-index 4
+    z-index 5
     transform-origin center top
     border-radius 5px
     border 1px solid $third-color
@@ -68,12 +68,16 @@
         background $primary-color
         left calc(100% / 2 - 7.5px)
         top -7px
-.site-header__nav > a
+.site-header__nav > a, .site-header__nav button
     color $text-color
     padding 10px 0
     transition $transition
     &:hover
         color $secondary-color
+.site-header__nav button
+    background none
+    border none
+    cursor pointer
 .site-header__nav.active
     visibility visible
     transform scaleY(1)

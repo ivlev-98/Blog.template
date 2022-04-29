@@ -29,6 +29,8 @@
         color $text-light-color
     &:focus
         outline 3px solid $third-color
+    &.error
+        outline 3px solid $danger-color
 .create-edit select
     background $primary-color
     outline 1px solid $third-color
@@ -36,6 +38,8 @@
     resize none
     height 330px
     padding 10px
+    &.small
+        height 100px
 .create-edit input[type="submit"]
     background $secondary-color
     border none

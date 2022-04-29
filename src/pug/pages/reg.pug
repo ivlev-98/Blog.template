@@ -8,6 +8,14 @@ block content
         input(type="text" id="name" name="name" placeholder="Иван")
         label(for="surname") Фамилия:
         input(type="text" id="surname" name="surname" placeholder="Иванов")
+        label Пол:
+        span
+            span
+                input(type="radio" name="gender" id="male" value="0")
+                label(for="male") Мужской
+            span
+                input(type="radio" name="gender" id="female" value="0")
+                label(for="female") Женский
         label(for="email") Email:
         input(type="email" id="email" name="email" placeholder="example@domain.ru")
         label(for="password") Пароль:

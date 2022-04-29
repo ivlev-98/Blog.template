@@ -29,7 +29,7 @@ a
 #site-overlay, #site-overlay2
     position fixed
     top 0
-    z-index 2
+    z-index 4
     width 100%
     height 100vh
     opacity 0
@@ -57,23 +57,26 @@ a
     display flex
     flex-direction column
     gap 15px
+    transition: $transition
     @media(max-width 1024px)
         width 100%
         right 0
         align-items center
+.container.active ~ .alerts
+    right 252px
 .alert
     display flex
     align-items center
     justify-content space-between
     transition $transition
-    width 270px
-    height 50px
+    width 300px
+    min-height 50px
     padding-left 30px
     background $primary-color
     position relative
     border-radius 10px
     overflow hidden
-    animation jump .2s 3 ease-in 1s
+    animation jump .2s 3 ease-in 2s
     font-size 16px
     box-shadow 0 0 10px 2px $text-light-color
     @media(max-width 1024px)
@@ -84,26 +87,31 @@ a
         &:before
             content ''
             position absolute
-            width 6px
+            width 8px
             left 0
-            height 50px
+            height 100%
             background $danger-color
     &.success
         &:before
             content ''
             position absolute
-            width 6px
+            width 8px
             left 0
-            height 50px
+            height 100%
             background $success-color
 .alert span
-    height 50px
-    width 45px
+    height 30px
+    width 30px
+    min-height 30px
+    min-width 30px
     display flex
+    margin 0 10px
+    background $bg-color
     align-items center
     justify-content center
     transition $transition
     cursor pointer
+    border-radius: 50%
     &:hover
         background $third-color
 .alert svg
