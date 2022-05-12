@@ -36,8 +36,20 @@
     font-size 16px
     @media(max-width: 750px)
         font-size 14px
+.post__controlls button
+    border none
+    background none
+    display flex
+    cursor pointer
+    color $text-light-color
+    gap 5px
+    transition $transition
+.post__controlls button.danger:hover
+    color $danger-color
 .post__controls span.action
     cursor pointer
+.post__controls span
+    padding 0
 .post__controls a, .post__controls span.action
     transition $transition
     padding 0
