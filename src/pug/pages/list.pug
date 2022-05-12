@@ -1,0 +1,38 @@
+extends ../layouts/main.pug
+include ../mixins/right-nav.pug
+block title
+    | Авторизация
+block content
+    section.list
+        .list__list
+            .list__item
+                h4 Автомобили
+                .stat
+                    span
+                        span Постов:
+                        span.count 25
+                .actions
+                    a(href="") Изменить
+                    form
+                        button.danger Удалить
+            .list__item
+                h4 Автомобили
+                .stat
+                    span
+                        span Постов:
+                        span.count 25
+                .actions
+                    a(href="") Изменить
+                    form
+                        button.danger Удалить
+                        
+block nav
+    +right-nav([
+        {title: 'Автомобили', href: "/auto", selected: false},
+        {title: 'Путешествия', href: "/trevel", selected: true},
+        {title: 'Истории', href: "/story", selected: false},
+        {title: 'Программирование', href: "/programming", selected: false},
+        {title: 'Бизнес', href: "/business", selected: false},
+        {title: 'Кулинария', href: "/cooking", selected: false},
+        {title: 'Технологии', href: "/technologies", selected: false}
+    ])
