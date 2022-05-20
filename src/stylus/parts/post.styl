@@ -28,7 +28,7 @@
         gap 10px
 .post__controls svg
     font-size 1.35em
-.post__controls span, .post__controls a
+.post__controls span, .post__controls a, .post__controls button
     display flex
     align-items center
     gap 5px
@@ -36,25 +36,21 @@
     font-size 16px
     @media(max-width: 750px)
         font-size 14px
-.post__controlls button
+.post__controls button
     border none
     background none
-    display flex
     cursor pointer
-    color $text-light-color
-    gap 5px
-    transition $transition
-.post__controlls button.danger:hover
-    color $danger-color
 .post__controls span.action
     cursor pointer
 .post__controls span
     padding 0
-.post__controls a, .post__controls span.action
+.post__controls a, .post__controls span.action, .post__controls button
     transition $transition
     padding 0
     &:hover
         color: $secondary-color
+    &.danger:hover
+        color $danger-color
     &.selected
         color $secondary-color
 #comments
